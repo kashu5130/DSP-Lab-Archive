@@ -1,0 +1,6 @@
+{
+  "name": "DSP Lab Archive — Scilab Practical Experiments & Manual",
+  "description": "Digital Signal Processing laboratory manual and interactive Scilab 6.1.0 practical experiment code repository with inline preview, one-click copy, search filtering, and .sce downloads.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
