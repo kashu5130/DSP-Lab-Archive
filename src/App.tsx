@@ -31,7 +31,7 @@ export default function App() {
   });
 
   useEffect(() => {
-    const stopFavicon = startAnimatedTabFavicon({ intervalMs: 150 });
+    const stopFavicon = startAnimatedTabFavicon({ intervalMs: 80, framesPerTheme: 20 });
     return () => stopFavicon();
   }, []);
 
