@@ -45,6 +45,12 @@ export function Header() {
           >
             Scilab Tips
           </a>
+          <a
+            href="#share-preview"
+            className="hover:text-[#1C1917] transition-colors duration-150 whitespace-nowrap shrink-0 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#0F766E]"
+          >
+            Share Card
+          </a>
         </nav>
 
         {/* Zone 3: 1 primary action */}
@@ -108,6 +114,13 @@ export function Header() {
               className="rounded-md px-3 py-2.5 text-sm font-medium text-[#1C1917] hover:bg-[#F3EFE7]"
             >
               Scilab Tips
+            </a>
+            <a
+              href="#share-preview"
+              onClick={() => setMobileMenuOpen(false)}
+              className="rounded-md px-3 py-2.5 text-sm font-medium text-[#1C1917] hover:bg-[#F3EFE7]"
+            >
+              Share Card
             </a>
           </div>
         </nav>

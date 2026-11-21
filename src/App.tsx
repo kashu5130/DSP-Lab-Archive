@@ -4,11 +4,13 @@ import { ExperimentCard } from './components/ExperimentCard';
 import { Header } from './components/Header';
 import { ImportScilabModal } from './components/ImportScilabModal';
 import { LabManualSection } from './components/LabManualSection';
+import { PreviewLinkCard } from './components/PreviewLinkCard';
 import { ScilabGuideSection } from './components/ScilabGuideSection';
 import { SearchFilterBar } from './components/SearchFilterBar';
 import { EXPERIMENTS } from './data/experiments';
 import type { ExperimentFile, FilterCategory } from './types/experiment';
 import { filterExperiments } from './utils/scilabHighlighter';
+import { startAnimatedTabFavicon } from './utils/tabAnimator';
 
 const CUSTOM_STORAGE_KEY = 'dsp_lab_custom_scripts_v1';
 
@@ -27,6 +29,11 @@ export default function App() {
       return [];
     }
   });
+
+  useEffect(() => {
+    const stopFavicon = startAnimatedTabFavicon({ intervalMs: 150 });
+    return () => stopFavicon();
+  }, []);
 
   useEffect(() => {
     try {
@@ -145,6 +152,9 @@ export default function App() {
 
         {/* Code Review Summary & Scilab File Guide */}
         <ScilabGuideSection />
+
+        {/* Preview Link Card & OpenGraph Share Metadata */}
+        <PreviewLinkCard experiments={allExperiments} />
       </main>
 
       <footer className="border-t border-[#E4DFD6] bg-[#F3EFE7]/60 py-6">
